@@ -1,0 +1,1 @@
+curl -s https://learn.reboot01.com/assets/superhero/all.json | jq --argjson HID "$HERO_ID" '.[] | select(.id == $HID) .connections.relatives' | tr -d '"'
